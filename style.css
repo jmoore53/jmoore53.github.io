@@ -1,3 +1,7 @@
-h3{
+@import 'https://fonts.googleapis.com/css?family=Fira+Sans|Frank+Ruhl+Libre|Karla|Questrial|Rubik';
+
+h1.title{
+	font-size: 1.75rem;
+	font-family: 'Questrial', sans-serif;
 	text-align: center;
 }
