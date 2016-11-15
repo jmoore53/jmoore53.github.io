@@ -9,7 +9,7 @@ function pullBTCPrice(){
     var urls = ['https://api.coinmarketcap.com/v1/ticker/bitcoin/','https://api.coinmarketcap.com/v1/ticker/maidsafecoin/','https://api.coinmarketcap.com/v1/ticker/ethereum/'];
     for(var i=0; i < urls.length; i++){
         var currency = urls[i].substring(40,urls[i].lastIndexOf('/')); 
-        data = getHTML(urls[i], setValues);    
+        data = getHTML(urls[i]);    
     }
 }
 
@@ -34,32 +34,4 @@ function setValues(name, price, SevenDayChange){
     var HTMLCurrency = $('.'+name+' > .percentChange')[0];
     HTMLCurrency.innerHTML = SevenDayChange + "%";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
