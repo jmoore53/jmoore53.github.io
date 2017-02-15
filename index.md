@@ -5,8 +5,8 @@
 layout: default
 ---
 
-# Blog Posts and Current Projects
-
+## [About](/about)
+# Blog Posts and Current Project Comments:
 {% for page in site.posts %}
 ### [{{ page.title }}]({{ page.url }})
 {% endfor %}
