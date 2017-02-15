@@ -6,7 +6,9 @@ layout: default
 ---
 
 ## [About](/about)
+
 # Blog Posts and Current Project Comments:
+
 {% for page in site.posts %}
 ### [{{ page.title }}]({{ page.url }})
 {% endfor %}
