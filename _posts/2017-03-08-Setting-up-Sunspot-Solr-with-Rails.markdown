@@ -81,11 +81,36 @@ service solr status
 ```
 
 These commands should get solr up and running and to check this, go to 'youripaddress:8983' in a browser and you should see a Solr Web Interface. 
+Solr should be running on port 8983. It is best practice to block this port from all except localhost if you are running production on one system. (This port's web interface is exposed by default. 
+Only allow servers you want to see this port to see this port by blocking all other ip addresses. Having this port open can expose data and poses as a serious security threat.)
 
 ### Solr in production with Rails
 
+Solr Should be ready somewhat out of box for rails. There are just a few configurations that need to be made. 
+This setup consumes the most time. 
 
+Creating a Solr Collection for your Rails application.
 
+`su - solr -c "/opt/solr/bin/solr create -c solr_sunspot_example -n data_driven_schema_configs"`
+
+In this example, we named our collection `solr_sunspot_example`, This creates an empty collection at `/var/solr/data/solr_sunspot_example`, which we will refer to in our rails configuration (kinda).
+After this is done, restart the solr service with: 
+
+`service solr restart`
+
+At this point, solr should be running and our collection should be set up.
+We can finally connect to our solr collection through rails by modifying the `config/sunspot.yml` file in our Rails Folder.
+
+```ruby
+production:
+  solr:
+    hostname: localhost
+    port: 8983
+    log_level: WARNING
+    path: /solr/solr_sunspot_example
+```
+
+With this, the rails app should be able to connect to Solr. Run `rake sunspot:solr:reindex` and everything should be in working order.
 
 
 # Resources
