@@ -15,9 +15,9 @@ The security of the cryptocurrency ledgers is based on the assumption that the m
 This means third parties who maintain the ledgers control how secure the ledger is. 
 The ledger is used to record all transactions made.
 
-Most Cryptocurrencies have a [proof-of-work schemes](https://en.wikipedia.org/wiki/Proof-of-work_system) based usually on total computing time to ensure the ledger is being supported properly by third parties. 
+Most Cryptocurrencies have a [proof-of-work scheme](https://en.wikipedia.org/wiki/Proof-of-work_system) based usually on total computing time to ensure the ledger is being supported properly by third parties. 
 The proof-of-work schemes are used to deter denial of service attacks and spam on a network. 
-Proof-of-work schemes just ensure the work being completed by the third party 'transaction-confirmer' is correct and begin completed by the user who says they are confirming the transactions.
+Proof-of-work schemes just ensure the work being completed by the third party 'transaction-confirmer' is correct and being completed by the user who says they are confirming the transactions.
 These proof-of-work systems are based on the SHA-256 cryptographic hashing function.
 
 ## Why I trade Cryptocurrencies
